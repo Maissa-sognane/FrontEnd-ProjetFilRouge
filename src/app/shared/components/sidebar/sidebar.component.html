@@ -1,0 +1,44 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h2>Soufiane FADIL</h2>
+      <h4>example@email.com</h4>
+    </div>
+    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+  </div>
+
+  <mat-divider></mat-divider>
+  <h2 matSubheader>Utilisateurs</h2>
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Users
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="users">Utilisateurs</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="dashboard">Administrateurs</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="dashboard">Apprenants</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="dashboard">Formateurs</a>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Profils</h2>
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Profils
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="dashboard">Roles</a>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-divider></mat-divider>
+
+</mat-nav-list>

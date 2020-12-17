@@ -1,0 +1,10 @@
+ul li {
+  list-style: none;
+}
+mat-toolbar{
+  background: #008e8e;
+  color: white;
+}
+img{
+  height: 40px;
+}

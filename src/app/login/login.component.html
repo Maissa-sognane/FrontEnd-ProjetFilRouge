@@ -1,0 +1,43 @@
+<div class="container">
+  <img class="wave" src="assets/images/wave.png" alt="image" />
+  <div class="container">
+    <div class="img">
+      <img src="assets/images/bg.svg">
+    </div>
+    <div class="login-content">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <img src="assets/images/avatar.svg">
+        <h3 class="title">SONATEL ACADEMY</h3>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="div">
+            <h5><label for="username">Username</label></h5>
+            <input type="text" id="username" formControlName="username" class="input" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">Username is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+            <h5><label for="password">Password</label></h5>
+            <input type="password" id="password" formControlName="password" class="input" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+        </div>
+        <button [disabled]="loading" class="btn btn-primary btn">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          connexion
+        </button>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+      </form>
+    </div>
+  </div>
+</div>
